@@ -1,0 +1,8 @@
+{
+  "name": "python-skills",
+  "description": "Battle-tested Python skills: clean code, design principles, testing/TDD, code review, and anti-patterns. Derived from ArjanCodes/betterpython patterns plus custom engineering conventions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "velazco-joseh"
+  }
+}

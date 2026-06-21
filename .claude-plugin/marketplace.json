@@ -1,0 +1,14 @@
+{
+  "name": "clean-python",
+  "description": "Battle-tested Python skills by velazco-joseh: clean code, design principles, testing/TDD, code review, and anti-patterns.",
+  "owner": {
+    "name": "velazco-joseh"
+  },
+  "plugins": [
+    {
+      "name": "python-skills",
+      "source": "./",
+      "description": "Battle-tested Python skills: clean code, design principles, testing/TDD, code review, and anti-patterns."
+    }
+  ]
+}
