@@ -20,6 +20,13 @@ Clean-Python turns one engineer's hard-won conventions into rules Claude follows
 | `python-code-review` | review, pre-merge, check my code | Review Pyramid, priority-first review |
 | `python-anti-patterns` | import order, file length, hardcoded values | Module organization: import order, file size, cohesion, centralized constants |
 
+## Commands
+
+| Command | Does |
+|---------|------|
+| `/python-skills:review-rules` | Reviews a Python diff against the skill rules and reports violations. Powers the pre-commit harness below. |
+| `/python-skills:audit [path]` | Audits a whole repository (or one path) against the skills and emits a scored quality report: four dimensions scored 0-6, prioritized P0-P3 findings, systemic patterns, and an action plan. |
+
 ## Install
 
 ```
@@ -46,7 +53,7 @@ This is an LLM review: non-deterministic, with per-commit latency and token cost
 
 ```
 skills/         the five skills, each a SKILL.md plus references
-commands/       review-rules.md, the diff-review command
+commands/       review-rules.md (diff review) and audit.md (repo audit)
 assets/         pre-commit.sh, the portable git hook
 bin/            validate_skills.py, validates SKILL.md structure
 .claude-plugin/ plugin and marketplace manifests
