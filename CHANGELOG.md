@@ -5,6 +5,16 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-06-21
+
+### Changed
+
+- **`python-anti-patterns` constants rule** is now discriminant instead of reuse-justified: domain/config constants must leave logic modules (to `constants.py` or a `constants/<category>.py` subpackage) even when few or single-use, while algorithm-internal sentinels/states stay local as `Enum`s. The `/audit` command inherits the stricter rule.
+
+### Added
+
+- **`python-anti-patterns` rule** against reflexive `from __future__ import annotations`: keep it only when load-bearing (`TYPE_CHECKING`-guarded imports or forward references), remove it elsewhere.
+
 ## [1.1.0] - 2026-06-21
 
 ### Added
@@ -26,5 +36,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Pre-commit harness** `assets/pre-commit.sh`: portable git hook piping the staged diff to Claude headless; blocks the commit on violations.
 - **Repo utility** `bin/validate_skills.py`: validates each `SKILL.md` frontmatter, `Trigger:` prefix, section order, and reference links.
 
+[1.2.0]: https://github.com/JoseVelazcoH/python-skills/releases/tag/v1.2.0
 [1.1.0]: https://github.com/JoseVelazcoH/python-skills/releases/tag/v1.1.0
 [1.0.0]: https://github.com/JoseVelazcoH/python-skills/releases/tag/v1.0.0
