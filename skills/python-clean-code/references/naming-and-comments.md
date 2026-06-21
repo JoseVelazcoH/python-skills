@@ -1,4 +1,4 @@
-# Naming & Comments (betterpython tips 4, 6)
+# Naming & Comments
 
 ## Naming
 Names should reveal intent so comments become unnecessary.

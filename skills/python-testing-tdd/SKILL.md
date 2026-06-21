@@ -58,4 +58,4 @@ Return tests (and, in TDD, the minimal implementation) with clear behavior-namin
 
 ## References
 
-- ArjanCodes betterpython patterns inform the code under test; pair with `python-clean-code` and `python-design-principles` during Refactor.
+- Pair with `python-clean-code` and `python-design-principles` during Refactor.

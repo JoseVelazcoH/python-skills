@@ -1,4 +1,4 @@
-# Data Types, Code Smells, DRY/KISS/YAGNI (betterpython tips 5, 7)
+# Data Types, Code Smells, DRY/KISS/YAGNI
 
 ## Right data structure
 Model structured data with types, not loose primitives.

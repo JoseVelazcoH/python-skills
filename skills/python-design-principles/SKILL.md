@@ -9,7 +9,7 @@ metadata:
 
 # Python Design Principles
 
-Structure-level design: how classes and modules relate. Based on ArjanCodes/betterpython tips 1–3 (coupling/cohesion, dependency inversion, strategy) plus SOLID.
+Structure-level design: how classes and modules relate — coupling/cohesion, dependency inversion, strategy, and SOLID.
 
 ## Activation Contract
 

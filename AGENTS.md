@@ -1,6 +1,6 @@
 # python-skills plugin
 
-Battle-tested Python skills, distributed as a Claude Code plugin. Derived from [ArjanCodes/betterpython](https://github.com/ArjanCodes/betterpython) patterns plus custom engineering conventions.
+Battle-tested Python skills, distributed as a Claude Code plugin. Built from custom engineering conventions.
 
 ## Skills
 

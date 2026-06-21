@@ -1,4 +1,4 @@
-# Coupling/Cohesion & Strategy (betterpython tips 1, 3)
+# Coupling/Cohesion & Strategy
 
 ## Coupling & Cohesion (tip 1)
 - **High cohesion**: related behavior lives together. A `VehicleRegistry` that also formats prices and prints output is low-cohesion — split each responsibility.

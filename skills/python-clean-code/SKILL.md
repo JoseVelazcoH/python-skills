@@ -9,7 +9,7 @@ metadata:
 
 # Python Clean Code
 
-Line- and function-level readability. Based on ArjanCodes/betterpython tips 4–7 (naming, classes-vs-functions, comments, data types) plus DRY/KISS/YAGNI.
+Line- and function-level readability: naming, classes-vs-functions, comments, data types, plus DRY/KISS/YAGNI.
 
 ## Activation Contract
 
