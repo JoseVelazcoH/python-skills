@@ -1,8 +1,14 @@
-# clean-python
+# Clean-Python
 
 A Claude Code plugin of battle-tested Python skills, plus a pre-commit harness that reviews your code against them before every commit.
 
 Skills are guidance Claude loads on demand. These five encode a specific, opinionated way of writing Python: readable, well-structured, and tested. Install once, and Claude applies them while it writes and reviews code in any project.
+
+## Why Clean-Python?
+
+Most Python guidance is generic and easy to ignore. A linter catches formatting, but not whether a class does too much, whether a constant should be shared, or whether a growing `if/elif` should have been a strategy. Those are judgment calls, and judgment is exactly what gets dropped under deadline.
+
+Clean-Python turns one engineer's hard-won conventions into rules Claude follows by default, then backs them with a pre-commit review so they hold even when you forget. Not opinions in a style guide nobody reads: standards applied as you write, and checked before you commit.
 
 ## Skills
 
@@ -52,4 +58,4 @@ Edit a `SKILL.md`, run `python bin/validate_skills.py` to check frontmatter and 
 
 ## License
 
-Apache-2.0
+Released under the [Apache-2.0](LICENSE) license.
