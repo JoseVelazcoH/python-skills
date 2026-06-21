@@ -19,10 +19,10 @@ Apply when the user writes tests, builds a feature test-first, asks about pytest
 
 - Red → Green → Refactor, in that order. Write a failing test first; write the minimal code to pass; then improve with tests green.
 - One scenario per test. Name it `test_<subject>_<condition>_<expected>`. Follow Arrange-Act-Assert.
-- Tests must be isolated and order-independent — no shared mutable module state.
+- Tests must be isolated and order-independent: no shared mutable module state.
 - Mock only external boundaries (APIs, email, payments, time, uuid, random). Use a real test database; never mock internal repositories/services or the code under test.
 - Enable branch coverage (`--cov-branch`); cover both sides of every conditional, not just lines.
-- Use `parametrize` only for the same check over many inputs — separate tests for distinct scenarios.
+- Use `parametrize` only for the same check over many inputs: separate tests for distinct scenarios.
 
 ## Decision Gates
 
@@ -37,9 +37,9 @@ Apply when the user writes tests, builds a feature test-first, asks about pytest
 
 ## Execution Steps
 
-1. RED — write the smallest failing test for the next behavior; run it, confirm it fails for the right reason.
-2. GREEN — write the minimal code to pass; run, confirm green.
-3. REFACTOR — clean code and tests while green.
+1. RED: write the smallest failing test for the next behavior; run it, confirm it fails for the right reason.
+2. GREEN: write the minimal code to pass; run, confirm green.
+3. REFACTOR: clean code and tests while green.
 4. Repeat per behavior; track phases explicitly for non-trivial features.
 
 ```python

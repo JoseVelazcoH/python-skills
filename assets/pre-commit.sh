@@ -34,7 +34,7 @@ result=$(printf '%s' "$response" | jq -r '.result')
 
 if printf '%s' "$result" | grep -q "VIOLATION:"; then
     echo
-    echo "Commit blocked — clean-python rule violations:"
+    echo "Commit blocked: clean-python rule violations:"
     printf '%s' "$result" | grep "VIOLATION:"
     echo
     echo "Fix them, or bypass with: git commit --no-verify"
@@ -46,7 +46,7 @@ if printf '%s' "$result" | grep -q "NO_VIOLATIONS"; then
     exit 0
 fi
 
-# Neither sentinel — fail safe: do not silently let unknown output through.
+# Neither sentinel: fail safe: do not silently let unknown output through.
 echo "clean-python: review inconclusive. Raw output:"
 printf '%s\n' "$result"
 echo "Bypass with: git commit --no-verify"

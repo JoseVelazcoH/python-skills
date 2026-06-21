@@ -9,19 +9,19 @@ metadata:
 
 # Python Code Review
 
-Review Python changes using the Review Pyramid — prioritize what matters, automate what doesn't.
+Review Python changes using the Review Pyramid: prioritize what matters, automate what doesn't.
 
 ## Activation Contract
 
-Apply when the user asks to review changes, a diff, or a PR, or to check code before merge. Reviewing is distinct from writing — focus on judgment, not rewriting.
+Apply when the user asks to review changes, a diff, or a PR, or to check code before merge. Reviewing is distinct from writing: focus on judgment, not rewriting.
 
 ## Hard Rules
 
 - Review bottom-up: API semantics → implementation correctness → docs → tests → style. Spend effort where the pyramid is widest at the base.
-- Flag style/nits last and lightest — they are automatable (ruff/formatter), not merge-blockers.
+- Flag style/nits last and lightest: they are automatable (ruff/formatter), not merge-blockers.
 - Always anchor review in task/business context; correctness depends on intent.
 - Block on: breaking API contracts, wrong business logic, unhandled edge cases, security issues, missing tests for new behavior.
-- Verify claims against the diff — never approve logic you have not traced.
+- Verify claims against the diff: never approve logic you have not traced.
 
 ## Decision Gates
 
@@ -43,7 +43,7 @@ Apply when the user asks to review changes, a diff, or a PR, or to check code be
 
 ## Output Contract
 
-Return findings grouped by pyramid layer, severity-ordered, each citing `file:line` with a specific remediation. Separate merge-blockers from nits explicitly. Do not rewrite the change — review it.
+Return findings grouped by pyramid layer, severity-ordered, each citing `file:line` with a specific remediation. Separate merge-blockers from nits explicitly. Do not rewrite the change: review it.
 
 ## References
 

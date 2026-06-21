@@ -21,7 +21,7 @@ Apply when code is hard to read, a function does too much, names are cryptic, co
 - Delete comments that restate code or hold dead code. Keep only *why* (rationale) and docstrings.
 - Use a function, not a class, when there is no state to hold. Use `@dataclass`/`Enum`/`NamedTuple` instead of tuples or raw dicts for structured data.
 - Flatten nesting with guard clauses (early return). Extract long functions into named steps.
-- Replace repeated blocks with one parameterized abstraction (DRY) — but only after the third repeat, never speculative (YAGNI). Prefer the simplest construct that works (KISS).
+- Replace repeated blocks with one parameterized abstraction (DRY): but only after the third repeat, never speculative (YAGNI). Prefer the simplest construct that works (KISS).
 
 ## Decision Gates
 
@@ -38,9 +38,9 @@ Apply when code is hard to read, a function does too much, names are cryptic, co
 ## Execution Steps
 
 1. Read the smell; name which gate above it hits.
-2. Show a tight `# Bad` → `# Good` diff — change one smell at a time.
+2. Show a tight `# Bad` → `# Good` diff: change one smell at a time.
 3. Keep behavior identical; if tests exist, they must stay green.
-4. Stop at KISS — do not introduce abstraction the current code does not need.
+4. Stop at KISS: do not introduce abstraction the current code does not need.
 
 ```python
 # Bad
@@ -64,5 +64,5 @@ Return the refactored Python, one smell per diff, with a one-line rationale per 
 
 ## References
 
-- `references/naming-and-comments.md` — naming and comment rules with examples.
-- `references/data-and-smells.md` — data-type modeling, code smells, DRY/KISS/YAGNI.
+- `references/naming-and-comments.md`: naming and comment rules with examples.
+- `references/data-and-smells.md`: data-type modeling, code smells, DRY/KISS/YAGNI.

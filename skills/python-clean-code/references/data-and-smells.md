@@ -4,7 +4,7 @@
 Model structured data with types, not loose primitives.
 
 ```python
-# Bad — parallel lists / raw dict
+# Bad: parallel lists / raw dict
 user = ("Ana", "ana@x.com", 30)
 # Good
 from dataclasses import dataclass
@@ -33,6 +33,6 @@ def add(a: int, b: int) -> int: return a + b
 - Deep nesting → guard clauses (early return).
 
 ## DRY / KISS / YAGNI
-- DRY: extract a shared, parameterized function — after the third repeat, not before.
+- DRY: extract a shared, parameterized function: after the third repeat, not before.
 - KISS: simplest construct that works; avoid factories/abstractions for trivial logic.
 - YAGNI: model only what is needed now; no speculative fields or hooks.

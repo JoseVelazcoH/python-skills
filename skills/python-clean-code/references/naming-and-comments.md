@@ -12,22 +12,22 @@ current_user = get_user()
 total_price = calc()
 ```
 
-- Functions: `verb_noun` — `calculate_total_price`, `send_welcome_email`.
-- Booleans: `is_`, `has_`, `can_` — `is_active`, `has_permission`.
-- Constants: UPPER_SNAKE for magic numbers — never inline `0.2`, name it `PREMIUM_DISCOUNT_RATE`.
+- Functions: `verb_noun`: `calculate_total_price`, `send_welcome_email`.
+- Booleans: `is_`, `has_`, `can_`: `is_active`, `has_permission`.
+- Constants: UPPER_SNAKE for magic numbers: never inline `0.2`, name it `PREMIUM_DISCOUNT_RATE`.
 
 ## Comments
 Keep only what code cannot express.
 
 ```python
-# Bad — restates code
+# Bad: restates code
 count += 1  # increment count
 
-# Good — explains why
+# Good: explains why
 # Retry once: the upstream API drops the first request after idle.
 retry_once(call)
 ```
 
-- Delete commented-out (dead) code — version control remembers it.
-- A comment compensating for a bad name is a smell — rename instead.
+- Delete commented-out (dead) code: version control remembers it.
+- A comment compensating for a bad name is a smell: rename instead.
 - Public functions/classes get docstrings; internal helpers rarely need them.

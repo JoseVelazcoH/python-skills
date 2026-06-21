@@ -1,6 +1,6 @@
 # Import Order (Custom Convention)
 
-This is a deliberate project convention. It differs from PEP 8 / ruff-isort defaults — that is intentional.
+This is a deliberate project convention. It differs from PEP 8 / ruff-isort defaults: that is intentional.
 
 ## The rule
 1. All plain `import x` statements first, alphabetical.
@@ -29,14 +29,14 @@ from core.utils.files import read_csv_from_zip_url
 from core.utils.logger import get_logger
 ```
 
-## Wrong — `from typing` placed before plain imports
+## Wrong: `from typing` placed before plain imports
 ```python
 from typing import Any, Optional   # must come after the import block
 import io
 import pandas as pd
 ```
 
-## Wrong — stdlib/third-party imports split by a blank line
+## Wrong: stdlib/third-party imports split by a blank line
 ```python
 from typing import Any, Optional
 

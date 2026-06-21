@@ -10,14 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - **Skills** (built from custom engineering conventions):
-  - `python-clean-code` — line/function readability: naming, comments, classes-vs-functions, data types, code smells, DRY/KISS/YAGNI.
-  - `python-design-principles` — class/module structure: SOLID, coupling/cohesion, Strategy over branch-on-type.
-  - `python-testing-tdd` — Red-Green-Refactor workflow with quality pytest patterns.
-  - `python-code-review` — Review Pyramid, priority-first review.
-  - `python-anti-patterns` — custom module-organization rules: import order, file length, hardcoded values, centralized constants.
+  - `python-clean-code`: line/function readability: naming, comments, classes-vs-functions, data types, code smells, DRY/KISS/YAGNI.
+  - `python-design-principles`: class/module structure: SOLID, coupling/cohesion, Strategy over branch-on-type.
+  - `python-testing-tdd`: Red-Green-Refactor workflow with quality pytest patterns.
+  - `python-code-review`: Review Pyramid, priority-first review.
+  - `python-anti-patterns`: custom module-organization rules: import order, file length, hardcoded values, centralized constants.
 - **Plugin packaging**: `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` (marketplace `clean-python`); validated with `claude plugin validate`.
-- **Command** `/python-skills:review-rules` — reviews a staged Python diff against the skill rules, emitting `VIOLATION:`/`NO_VIOLATIONS`.
-- **Pre-commit harness** `assets/pre-commit.sh` — portable git hook piping the staged diff to Claude headless; blocks the commit on violations.
-- **Repo utility** `bin/validate_skills.py` — validates each `SKILL.md` frontmatter, `Trigger:` prefix, section order, and reference links.
+- **Command** `/python-skills:review-rules`: reviews a staged Python diff against the skill rules, emitting `VIOLATION:`/`NO_VIOLATIONS`.
+- **Pre-commit harness** `assets/pre-commit.sh`: portable git hook piping the staged diff to Claude headless; blocks the commit on violations.
+- **Repo utility** `bin/validate_skills.py`: validates each `SKILL.md` frontmatter, `Trigger:` prefix, section order, and reference links.
 
 [1.0.0]: https://github.com/JoseVelazcoH/python-skills/releases/tag/v1.0.0

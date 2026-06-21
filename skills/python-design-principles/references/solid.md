@@ -1,9 +1,9 @@
 # SOLID in Python
 
-## S — Single Responsibility
+## S: Single Responsibility
 One reason to change. Split a class that creates users *and* sends email *and* exports CSV into focused classes.
 
-## O — Open/Closed
+## O: Open/Closed
 Add behavior with a new class, not by editing an `if/elif`. See Strategy in `coupling-strategy.md`.
 
 ```python
@@ -15,10 +15,10 @@ class VIPDiscount(DiscountStrategy):       # extend without touching others
     def calculate(self, amount: float) -> float: return amount * 0.3
 ```
 
-## L — Liskov Substitution
-A subtype must honor the parent contract. A `Penguin(Bird)` that raises on `fly()` breaks LSP — model `move()` on `Bird`, `fly()` on `FlyingBird`.
+## L: Liskov Substitution
+A subtype must honor the parent contract. A `Penguin(Bird)` that raises on `fly()` breaks LSP: model `move()` on `Bird`, `fly()` on `FlyingBird`.
 
-## I — Interface Segregation
+## I: Interface Segregation
 Prefer small `Protocol`s. Don't force a `Robot` to implement `eat()`/`sleep()`.
 
 ```python
@@ -27,7 +27,7 @@ class Workable(Protocol):
     def work(self) -> None: ...
 ```
 
-## D — Dependency Inversion
+## D: Dependency Inversion
 High-level code depends on abstractions; inject concretions.
 
 ```python

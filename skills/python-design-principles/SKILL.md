@@ -9,7 +9,7 @@ metadata:
 
 # Python Design Principles
 
-Structure-level design: how classes and modules relate — coupling/cohesion, dependency inversion, strategy, and SOLID.
+Structure-level design: how classes and modules relate: coupling/cohesion, dependency inversion, strategy, and SOLID.
 
 ## Activation Contract
 
@@ -20,8 +20,8 @@ Apply when designing or refactoring class/module structure: a class does many jo
 - One reason to change per class (SRP). High cohesion (related behavior together), low coupling (few cross-dependencies).
 - Depend on abstractions, not concretions (DIP). Inject collaborators via the constructor; never instantiate concrete deps inside a class.
 - Open for extension, closed for modification (OCP): add behavior with a new class, not by editing an `if/elif`.
-- Replace branching-on-type with the Strategy pattern — interchangeable classes behind a common `Protocol`/`ABC`.
-- Prefer small `Protocol` interfaces (ISP) over fat ones. Subtypes must honor the parent contract (LSP) — no `raise NotImplementedError` overrides.
+- Replace branching-on-type with the Strategy pattern: interchangeable classes behind a common `Protocol`/`ABC`.
+- Prefer small `Protocol` interfaces (ISP) over fat ones. Subtypes must honor the parent contract (LSP): no `raise NotImplementedError` overrides.
 
 ## Decision Gates
 
@@ -36,19 +36,19 @@ Apply when designing or refactoring class/module structure: a class does many jo
 ## Execution Steps
 
 1. Identify the principle violated from the gate table.
-2. Introduce the smallest abstraction that fixes it — a `Protocol` or `ABC`, injected.
+2. Introduce the smallest abstraction that fixes it: a `Protocol` or `ABC`, injected.
 3. Show `# Bad` → `# Good`; verify the client now depends only on the abstraction.
 4. Do not add patterns the design does not yet need (YAGNI).
 
 ```python
 from typing import Protocol
 
-# Bad — branch on type, closed to extension
+# Bad: branch on type, closed to extension
 def pay(order, kind):
     if kind == "credit": ...
     elif kind == "debit": ...
 
-# Good — Strategy behind a Protocol (OCP + DIP)
+# Good: Strategy behind a Protocol (OCP + DIP)
 class PaymentProcessor(Protocol):
     def pay(self, order: Order) -> None: ...
 
@@ -65,5 +65,5 @@ Return restructured Python where clients depend on abstractions, plus a one-line
 
 ## References
 
-- `references/solid.md` — the five SOLID principles with Python examples.
-- `references/coupling-strategy.md` — coupling/cohesion and the Strategy pattern.
+- `references/solid.md`: the five SOLID principles with Python examples.
+- `references/coupling-strategy.md`: coupling/cohesion and the Strategy pattern.
